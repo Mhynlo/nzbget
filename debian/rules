@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+DEB_DEBIAN_DIR=$(dir $(firstword $(MAKEFILE_LIST)))
+DEB_UPSTREAM_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
+                               | sed -rne 's,^Version: ([^+]+).*,\1,p')
+
+REPACK_TMPDIR:=$(shell mktemp -d)
+
+%:
+	dh $@ --with autoreconf --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- --with-tlslib="GnuTLS"
+
+override_dh_installman:
+	dh_installman debian/nzbget-rn.1
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp/
+
+get-orig-source:
+	uscan --noconf --force-download --rename --download-current-version --destdir=$(REPACK_TMPDIR) --package=nzbget --upstream-version=$(DEB_UPSTREAM_VERSION) --watchfile=$(DEB_DEBIAN_DIR)/watch
+	rm -rf $(REPACK_TMPDIR)/nzbget-$(DEB_UPSTREAM_VERSION)
+	tar -xf $(REPACK_TMPDIR)/nzbget_$(DEB_UPSTREAM_VERSION).orig.tar.gz -C $(REPACK_TMPDIR)
+	rm $(REPACK_TMPDIR)/nzbget_$(DEB_UPSTREAM_VERSION).orig.tar.gz
+	GZIP="--best --no-name" tar -C $(REPACK_TMPDIR) -czf $(REPACK_TMPDIR)/nzbget_$(DEB_UPSTREAM_VERSION)+dfsg.orig.tar.gz --exclude=webui/lib/bootstrap* --exclude=webui/lib/raphael* --exclude=webui/lib/elycharts* nzbget-$(DEB_UPSTREAM_VERSION)
+	rm -r $(REPACK_TMPDIR)/nzbget-$(DEB_UPSTREAM_VERSION)
+	mv $(REPACK_TMPDIR)/nzbget_$(DEB_UPSTREAM_VERSION)+dfsg.orig.tar.gz $(CURDIR)
+	rm -rf $(REPACK_TMPDIR)

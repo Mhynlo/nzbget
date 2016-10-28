@@ -1,0 +1,36 @@
+Source: nzbget-rn
+Section: net
+Priority: extra
+Maintainer: Mhynlo <mhynlo@mhynlo.io>
+Build-Depends:
+ debhelper (>= 9),
+ dh-autoreconf,
+ libgnutls28-dev,
+ libncurses5-dev,
+ libxml2-dev,
+ pkg-config
+Standards-Version: 3.9.6
+Homepage: http://nzbget.net/
+Vcs-Git: git://anonscm.debian.org/collab-maint/nzbget.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/nzbget.git;a=summary
+
+Package: nzbget-rn
+Architecture: any
+Depends:
+ libjs-elycharts (>= 2.1.5),
+ libjs-raphael (>= 2.1.0),
+ libjs-twitter-bootstrap (>= 2.0.2),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Recommends: python
+Suggests: par2
+Description: command-line based binary newsgrabber for nzb files
+ NZBGet is a command-line based binary newsgrabber that uses nzb files as
+ described in http://docs.newzbin.com/index.php/Newzbin:NZB_Specs, they are
+ commonly used to describe binaries posted in the Usenet that span multiple
+ posts.
+ .
+ nzbget can be run as a standalone tool, in client/server mode or as a daemon,
+ which makes it ideal to run on NAS-devices or routers. nzbget supports
+ automatic par-check/-repair can use scripts to postprocess downloaded files,
+ for example to stream them to an audio/video player.

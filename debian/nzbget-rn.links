@@ -1,0 +1,6 @@
+/usr/share/javascript/twitter-bootstrap/css/bootstrap.css /apps/nzbget/webui/lib/bootstrap.css
+/usr/share/javascript/twitter-bootstrap/js/bootstrap.js /apps/nzbget/webui/lib/bootstrap.js
+/usr/share/javascript/twitter-bootstrap/js/bootstrap.min.js /apps/nzbget/webui/lib/bootstrap.min.js
+/usr/share/javascript/raphael/raphael.min.js /apps/nzbget/webui/lib/raphael.min.js
+/usr/share/javascript/elycharts/elycharts.js /apps/nzbget/webui/lib/elycharts.js
+/usr/share/javascript/elycharts/elycharts.min.js /apps/nzbget/webui/lib/elycharts.min.js

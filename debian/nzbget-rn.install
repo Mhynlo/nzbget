@@ -1,0 +1,5 @@
+#!/usr/bin/dh-exec
+./nzbget apps/nzbget
+./webui/* apps/nzbget/webui
+./debian/nzbget.conf apps/nzbget
+./debian/rn-files/* apps/nzbget

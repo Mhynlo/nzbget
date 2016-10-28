@@ -1,0 +1,14 @@
+[Unit]
+Description=NZBGet Daemon
+Documentation=http://nzbget.net/Documentation
+After=network.target
+
+[Service]
+ExecStart=/apps/nzbget/nzbget -c /apps/nzbget/nzbget.conf
+Restart=on-failure
+User=admin
+Group=admin
+
+
+[Install]
+WantedBy=multi-user.target
