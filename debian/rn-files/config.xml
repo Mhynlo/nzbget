@@ -7,7 +7,7 @@
   <LaunchURL>https://localhost/apps/nzbget-rn/webui/</LaunchURL>
   <ReservePort>6789</ReservePort>
   <InfoURL>http://nzbget.net/</InfoURL>
-  <DebianPackage>nzbget</DebianPackage>
+  <DebianPackage>nzbget-rn</DebianPackage>
   <ServiceName>fvapp-nzbget-rn.service</ServiceName>
   <Description lang="en-us">The most efficient usenet downloader. Default username: nzbget / password: tegbzn6789</Description>
 </Application>
