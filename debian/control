@@ -20,6 +20,8 @@ Depends:
  libjs-elycharts (>= 2.1.5),
  libjs-raphael (>= 2.1.0),
  libjs-twitter-bootstrap (>= 2.0.2),
+ unrar-free,
+ p7zip,
  ${misc:Depends},
  ${shlibs:Depends}
 Recommends: python

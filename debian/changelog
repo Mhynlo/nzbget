@@ -1,3 +1,12 @@
+nzbget-rn (17.1-1) stableD; urgency=medium
+
+  * Fixed issue #1 (systemd ExecStop typo)
+  * Fixed issued #2 (app status persists across reboots)
+  * Added unrar-free package to help support unrar setting
+  * Added p7zip package to help support 7zip setting
+
+ -- Mhynlo <mhynlo@mhynlo.io>  Tue, 01 Nov 2016 12:40:18 -0700
+
 nzbget-rn (17.1-0) stable; urgency=medium
 
   * Initial release.

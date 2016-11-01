@@ -1,7 +1,7 @@
 <Application resource-id="nzbget-rn"><!-- 'resource-id' must be AppName -->
   <Name>NZBGet</Name>
   <Author>Mhynlo</Author>
-  <Version>17.1-0</Version>
+  <Version>17.1-1</Version>
   <RequireReboot>0</RequireReboot>
   <ConfigURL/>
   <LaunchURL>https://localhost/apps/nzbget-rn/webui/</LaunchURL>
