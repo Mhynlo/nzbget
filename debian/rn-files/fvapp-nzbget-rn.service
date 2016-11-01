@@ -6,12 +6,7 @@ After=network.target
 [Service]
 User=admin
 Group=admin
-Type=forking
-PIDFile=/run/nzbget-rn/nzbget.lock
-RuntimeDirectory=/run/nzbget-rn/
-ExecStart=/apps/nzbget-rn/nzbget -D
-ExecStop=/apps/nzbget-rn/nzbget -Q
-ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/apps/nzbget-rn/nzbget -s -o OutputMode=log
 KillMode=process
 Restart=on-failure
 
