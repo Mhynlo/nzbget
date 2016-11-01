@@ -4,10 +4,15 @@ Documentation=http://nzbget.net/Documentation
 After=network.target
 
 [Service]
-ExecStart=/apps/nzbget/nzbget -c /apps/nzbget/nzbget.conf
-Restart=on-failure
 User=admin
 Group=admin
+Type=forking
+PIDFile=/run/nzbget.lock
+ExecStart=/apps/nzbget-rn/nzbget -D
+ExecStop=/uapps/nzbget-rn/nzbget -Q
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
 
 
 [Install]
