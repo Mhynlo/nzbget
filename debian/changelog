@@ -1,4 +1,4 @@
-nzbget-rn (17.1-1) stableD; urgency=medium
+nzbget-rn (17.1-1) stable; urgency=medium
 
   * Fixed issue #1 (systemd ExecStop typo)
   * Fixed issued #2 (app status persists across reboots)
