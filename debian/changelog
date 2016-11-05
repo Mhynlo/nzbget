@@ -1,3 +1,9 @@
+nzbget-rn (17.1-2) stable; urgency=medium
+
+  * Updated Debian package to not overwrite config file
+
+ -- Mhynlo <mhynlo@mhynlo.io>  Tue, 04 Nov 2016 17:28:36 -0700
+
 nzbget-rn (17.1-1) stable; urgency=medium
 
   * Fixed issue #1 (systemd ExecStop typo)
