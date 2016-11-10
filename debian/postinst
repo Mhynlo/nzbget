@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for sickrage
+# postinst script for nzbget-rn
 #
 # see: dh_installdeb(1)
 
@@ -21,7 +21,7 @@ set -e
 case "$1" in
     configure)
     chown -R admin:admin /apps/nzbget-rn
-    
+
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)
     ;;
@@ -35,7 +35,7 @@ esac
 ###
 # Enable service
 ###
-rn_nml -S sickrage
+rn_nml -S nzbget-rn
 
 
 # dh_installdeb will replace this with shell code automatically
