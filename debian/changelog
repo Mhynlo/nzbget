@@ -1,3 +1,10 @@
+nzbget-rn (17.1-4) stable; urgency=medium
+
+  * Added support for OpenSSL
+  * OpenSSL support resolves check update issue
+
+ -- Mhynlo <mhynlo@mhynlo.io>  Tue, 11 Nov 2016 14:13:36 -0700
+
 nzbget-rn (17.1-3) stable; urgency=medium
 
   * Fixed auto start to initial install.
