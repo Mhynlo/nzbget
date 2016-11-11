@@ -8,7 +8,8 @@ Build-Depends:
  libgnutls28-dev,
  libncurses5-dev,
  libxml2-dev,
- pkg-config
+ pkg-config,
+ libssl-dev
 Standards-Version: 3.9.6
 Homepage: http://nzbget.net/
 Vcs-Git: git://anonscm.debian.org/collab-maint/nzbget.git
