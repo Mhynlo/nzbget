@@ -2,4 +2,5 @@
 ./nzbget apps/nzbget-rn
 ./webui/* apps/nzbget-rn/webui
 ./debian/nzbget.conf apps/nzbget-rn
+./debian/nzbget.conf => apps/nzbget-rn/nzbget.conf.template
 ./debian/rn-files/* apps/nzbget-rn

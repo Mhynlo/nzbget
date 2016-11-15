@@ -9,7 +9,8 @@ Build-Depends:
  libncurses5-dev,
  libxml2-dev,
  pkg-config,
- libssl-dev
+ libssl-dev,
+ dh-exec
 Standards-Version: 3.9.6
 Homepage: http://nzbget.net/
 Vcs-Git: git://anonscm.debian.org/collab-maint/nzbget.git
