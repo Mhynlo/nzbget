@@ -1,3 +1,9 @@
+nzbget-rn (17.1-5) stable; urgency=medium
+
+  * Corrected the template file/config
+
+ -- Mhynlo <mhynlo@mhynlo.io>  Mon, 14 Nov 2016 18:26:17 -0700
+
 nzbget-rn (17.1-4) stable; urgency=medium
 
   * Added support for OpenSSL
