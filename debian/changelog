@@ -1,3 +1,9 @@
+nzbget-rn (17.1-6) stable; urgency=medium
+
+  * Config file no longer gets over written.
+
+ -- Mhynlo <mhynlo@mhynlo.io>  Wed, 16 Nov 2016 18:50:23 -0800
+
 nzbget-rn (17.1-5) stable; urgency=medium
 
   * Corrected the template file/config
